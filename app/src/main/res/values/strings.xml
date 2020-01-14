@@ -3,4 +3,5 @@
     <string name="botaoEntrar">ENTRAR</string>
     <string name="campoEmail">E-mail</string>
     <string name="campoSenha">Senha</string>
+    <string name="todo">TODO</string>
 </resources>
