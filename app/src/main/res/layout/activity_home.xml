@@ -5,7 +5,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#FFFFFF"
+    android:id="@+id/drawer_layout"
+    android:fitsSystemWindows="true"
     tools:context=".home"
     tools:openDrawer="start">
 
@@ -14,7 +15,8 @@
         android:layout_height="match_parent"
         android:orientation="vertical">
 
-        <include layout="@layout/toolbar" />
+        <include layout="@layout/toolbar"/>
+
 
         <FrameLayout
             android:layout_width="match_parent"
@@ -30,8 +32,7 @@
         android:layout_height="match_parent"
         android:layout_gravity="start|left"
         app:headerLayout="@layout/nav_header_main2"
-        app:menu="@menu/activity_main2_drawer"
-        tools:ignore="MissingConstraints" />
+        app:menu="@menu/activity_main2_drawer" />
 
 
 
