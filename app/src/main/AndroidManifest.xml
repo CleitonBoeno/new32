@@ -9,10 +9,11 @@
         android:roundIcon="@drawable/iconrounded"
         android:supportsRtl="true"
         android:theme="@style/Theme.Design.NoActionBar">
+        <activity android:name=".cadastrar"></activity>
         <activity
             android:name=".Main2Activity"
             android:label="@string/title_activity_main2"
-            android:theme="@style/NoActionBar"></activity>
+            android:theme="@style/NoActionBar" />
         <activity android:name=".home" />
         <activity android:name=".Login" />
         <activity android:name=".SplashScreen">
