@@ -2,6 +2,7 @@ package com.example.adeligncia;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.provider.ContactsContract;
 import android.view.Gravity;
@@ -56,4 +57,5 @@ public class cadastrar extends AppCompatActivity {
             }
         });
     }
+
 }
