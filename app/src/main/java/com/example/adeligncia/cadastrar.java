@@ -25,24 +25,27 @@ public class cadastrar extends AppCompatActivity {
         botao.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v) {
+                BancoController crud = new BancoController(getBaseContext());
                 EditText Nome = findViewById(R.id.Nome);
-                EditText email = findViewById(R.id.mail);
+                EditText email = findViewById(R.id.email2);
                 EditText Senha = findViewById(R.id.Senha);
                 EditText repitasenha = findViewById(R.id.repitasenha);
 
                 String nomeString = Nome.getText().toString();
-                String emailString = email.getText().toString();
+                String email2String = email.getText().toString();
                 String SenhaString = Senha.getText().toString();
                 String repitasenhaString = repitasenha.getText().toString();
 
-                if (nomeString.isEmpty() || emailString.isEmpty() || SenhaString.isEmpty() || repitasenhaString.isEmpty()) {
+
+
+                if (nomeString.isEmpty() || email2String.isEmpty() || SenhaString.isEmpty() || repitasenhaString.isEmpty()) {
                     String resultado = "preeencha todos os campos";
 
                     Toast.makeText(getApplicationContext(), resultado, Toast.LENGTH_LONG).show();
 
                 }else{
                     if (SenhaString.equals(repitasenhaString)) {
-                        String resultado = "Cadastrou";
+                        String resultado = crud.insereDado(nomeString,email2String,SenhaString);
                         Toast toast=Toast.makeText(getApplicationContext(),resultado,Toast.LENGTH_SHORT);
                         toast.setGravity(Gravity.BOTTOM|Gravity.CENTER_HORIZONTAL,0,50);
                         toast.show();

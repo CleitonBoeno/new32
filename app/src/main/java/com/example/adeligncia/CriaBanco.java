@@ -5,32 +5,31 @@ import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 
 public class CriaBanco extends SQLiteOpenHelper {
-    private static final String NOME_BANCO="banco.db";
-    public static final String TABELA="usuarios";
-    public static final String ID="id";
-    public static final String NOME="nome";
-    public static final String MAIL="mail";
-    public static final String SENHA="senha";
-    private static final int VERSAO=2;
+    private static final String NOME = "nome";
+    private static final String TABELA = "usuarios";
+    private static final String ID = "_id";
+    private static final String EMAIL = "email";
+    private static final String SENHA = "senha";
+    private static final int VERSAO = 4;
 
     public CriaBanco(Context context){
-        super(context,NOME_BANCO,null,VERSAO);
+        super(context, "bd1.db",null,VERSAO);
     }
 
     @Override
-    public void onCreate(SQLiteDatabase db){
-        String sql= "CREATE TABLE "+TABELA+"("
-                +ID+"integer primary key autoincrement,"
-                +NOME+"text,"
-                +MAIL+"text,"
-                +SENHA+"text"
+    public void onCreate(SQLiteDatabase db) {
+        //criar tabela
+        String sql = "CREATE TABLE "+TABELA+"("+ID+" integer primary key autoincrement,"
+                +NOME+" text,"
+                +EMAIL+" text,"
+                +SENHA+" text"
                 +")";
         db.execSQL(sql);
     }
+
     @Override
-    public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion){
-        db.execSQL("DROP TABLE [IF EXISTS]."+TABELA);
-        onCreate(db);
+    public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
+
     }
 }
 

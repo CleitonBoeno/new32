@@ -8,6 +8,12 @@ public class BancoController {
 
     private SQLiteDatabase db;
     private CriaBanco banco;
+    private static final String NOME = "nome";
+    private static final String TABELA = "usuarios";
+    private static final String ID = "_id";
+    private static final String EMAIL = "email";
+    private static final String SENHA = "senha";
+    private static final int VERSAO = 1;
 
     public BancoController(Context context) {
         banco = new CriaBanco(context);
@@ -18,13 +24,15 @@ public class BancoController {
         long resultado;
 
         db = banco.getWritableDatabase();
+
         valores = new ContentValues();
-        valores.put(CriaBanco.NOME, nome);
-        valores.put(CriaBanco.MAIL, mail);
-        valores.put(CriaBanco.SENHA, senha);
+        valores.put(SENHA, senha);
+        valores.put(NOME, nome);
+        valores.put(EMAIL, mail);
 
 
-        resultado = db.insert(CriaBanco.TABELA, null, valores);
+
+        resultado = db.insert(TABELA, null, valores);
         db.close();
 
         if (resultado == -1)
