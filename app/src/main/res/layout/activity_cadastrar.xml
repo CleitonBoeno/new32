@@ -86,6 +86,7 @@
         android:layout_height="50dp"
         android:background="@drawable/entrarred"
         android:backgroundTint="@color/botaocor"
+        android:onClick="voltaTelaLogin"
         android:text="CADASTRAR"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

@@ -14,6 +14,11 @@ import android.widget.Toast;
 
 public class cadastrar extends AppCompatActivity {
 
+    public void voltaTelaLogin(View view){
+        Intent intent= new Intent(this,Login.class);
+        startActivity(intent);
+    }
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
