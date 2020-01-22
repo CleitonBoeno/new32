@@ -22,6 +22,10 @@ public class Login extends AppCompatActivity {
         startActivity(intent);
 
     }
+    public void proximaTelaMaps(View view) {
+        Intent intent = new Intent(this, MapsActivity.class);
+        startActivity(intent);
+    }
 
     public void proximaTelaCadastrar(View view) {
         Intent intent = new Intent(this, cadastrar.class);
