@@ -30,11 +30,12 @@
             android:value="@string/google_maps_key" />
 
         <activity
+            android:name=".MapsExercicios"
+            android:label="@string/title_activity_maps_exercicios"></activity>
+        <activity
             android:name=".MapsActivity"
             android:label="@string/title_activity_maps"
-            android:theme="@style/NoActionBar">
-
-        </activity>
+            android:theme="@style/NoActionBar"></activity>
         <activity android:name=".cadastrar" />
         <activity
             android:name=".Main2Activity"
