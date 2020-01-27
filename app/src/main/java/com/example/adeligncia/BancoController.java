@@ -14,7 +14,7 @@ public class BancoController {
     private static final String ID = "_id";
     private static final String EMAIL = "email";
     private static final String SENHA = "senha";
-    private static final int VERSAO = 1;
+    private static final int VERSAO = 4;
 
     public BancoController(Context context) {
         banco = new CriaBanco(context);
