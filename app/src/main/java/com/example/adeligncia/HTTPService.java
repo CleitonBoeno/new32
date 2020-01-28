@@ -2,6 +2,8 @@ package com.example.adeligncia;
 
 import android.os.AsyncTask;
 
+import com.google.gson.Gson;
+
 import java.io.IOException;
 import java.net.HttpURLConnection;
 import java.net.MalformedURLException;
@@ -35,7 +37,7 @@ public class HTTPService extends AsyncTask<Void,Void, CEPteste> {
         } catch (IOException e) {
             e.printStackTrace();
         }
-        return null;
+        return new Gson().fromJson(resposta.toString(),CEPteste.class);
     }
 
 }

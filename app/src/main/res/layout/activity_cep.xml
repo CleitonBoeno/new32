@@ -5,7 +5,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:padding="50dp"
-    android:background="@color/ColorHeader"
+    android:background="@drawable/gradiente"
     android:layout_width="match_parent"
     tools:context="com.example.adeligncia.cep">
 
@@ -13,11 +13,13 @@
         android:digits="0123456789"
         android:layout_height="wrap_content"
         android:hint="CEP"
+        android:textColorHint="#FFFFFF"
         android:id="@+id/textCEP"
-        android:textColor="#595959"
+        android:textColor="#FFFFFF"
         android:textSize="25sp"
         android:inputType="number"
-        android:layout_width="match_parent"/>
+        android:layout_width="match_parent"
+        />
 
     <LinearLayout
         android:gravity="center"
@@ -26,13 +28,13 @@
         android:layout_width="match_parent">
 
         <Button
-            android:background="@color/botaocor"
+            android:background="#EC7366"
             android:layout_height="wrap_content"
             android:id="@+id/cep"
             android:layout_marginBottom="10dp"
             android:padding="10dp"
             android:text="Buscar CEP"
-            android:textColor="#FDFDFD"
+            android:textColor="#FFFFFF"
             android:textSize="22sp"
             android:layout_width="wrap_content"/>
 
@@ -40,8 +42,8 @@
 
     <TextView
         android:layout_height="match_parent"
-        android:id="@+id/etMain_resposta"
-        android:textColor="#595959"
+        android:id="@+id/textviewresposta"
+        android:textColor="#FFFFFF"
         android:textSize="20sp"
         android:layout_width="match_parent"/>
 
