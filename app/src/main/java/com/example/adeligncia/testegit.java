@@ -12,3 +12,4 @@ public class testegit extends AppCompatActivity {
         setContentView(R.layout.activity_testegit);
     }
 }
+iohjgf
