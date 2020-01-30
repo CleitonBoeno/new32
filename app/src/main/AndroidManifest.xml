@@ -16,7 +16,8 @@
         android:roundIcon="@drawable/iconrounded"
         android:supportsRtl="true"
         android:theme="@style/Theme.Design.NoActionBar">
-        <activity android:name=".testegit"></activity>
+        <activity android:name=".api"></activity>
+        <activity android:name=".Main3Activity" />
         <activity android:name=".cep" />
         <!--
              The API key for Google Maps-based APIs is defined as a string resource.
